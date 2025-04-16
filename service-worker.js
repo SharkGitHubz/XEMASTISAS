@@ -1,24 +1,26 @@
-// This is the cache name and files to cache
 const CACHE_NAME = 'my-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/xematiazoicon192.png',
-  '/xematiazoicon.png',
-  '/manifest.json',
-  '/styles.css', // Include if you have external CSS files
-  '/script.js' // Include if you have external JS files
+    '/',  // Home page
+    '/XEMASTISAS/',  // Add this if this is the starting URL
+    '/index.html',  // Add any other important pages you want cached
+    '/style.css',  // Add your CSS file(s)
+    '/xematiazoicon.png',  // Add any important images/icons
+    '/xematiazoicon192.png',  // Add your other image sizes
+    '/script.js',  // Add your JS file(s)
+    '/manifest.json',  // Make sure manifest is cached
+    // Add any other assets you want cached
 ];
 
-// Install event - cache the essential files
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(urlsToCache);
-      })
-  );
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then((cache) => {
+                console.log('Caching app shell');
+                return cache.addAll(urlsToCache);
+            })
+    );
 });
+
 
 // Fetch event - serve from cache first, then network
 self.addEventListener('fetch', (event) => {
