@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
     <link rel="manifest" href="manifest.json">
@@ -113,7 +114,7 @@
             document.getElementById("message").classList.add("hidden");
 
             // Καθυστέρηση 3-5 δευτερολέπτων πριν εμφανιστεί το μάτι και το μήνυμα
-            const delay = Math.floor(Math.random() * 2000) + 3000; // Τυχαία καθυστέρηση 3-5 δευτερόλεπτα
+            const delay = Math.floor(Math.random() * 2000) + 3000; // Τυχαία καθυστέρηση 3-5 δευτερολέπτων
             setTimeout(function() {
                 // Εμφανίζουμε το μάτι
                 document.getElementById("eyeCircle").style.display = "block";
@@ -132,6 +133,17 @@
                 // Εμφανίζουμε το μήνυμα
                 document.getElementById("message").classList.remove("hidden");
             }, delay);
+        }
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('Service worker registered successfully!', reg))
+                    .catch(err => console.error('Service worker registration failed:', err));
+            });
         }
     </script>
 
