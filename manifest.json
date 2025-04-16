@@ -2,7 +2,7 @@
   "name": "Ξεματιάσμα",
   "short_name": "Ξεμάτιασμα",
   "description": "Ένα απλό app για να σε ξεματιάσει με την ευχή του ματιού.",
-  "start_url": "/",
+  "start_url": "/XEMASTISAS/",
   "display": "standalone",
   "background_color": "#f4f4f9",
   "theme_color": "#2e88b4",
