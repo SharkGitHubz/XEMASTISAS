@@ -1,7 +1,22 @@
 {
-  "name": "Xematiasma",
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "short_name": "Xmtsma",
-  "id": "xmstsma4"
+  "name": "Ξεματιάσμα",
+  "short_name": "Ξεμάτιασμα",
+  "description": "Ένα απλό app για να σε ξεματιάσει με την ευχή του ματιού.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f4f9",
+  "theme_color": "#2e88b4",
+  "lang": "el",
+  "icons": [
+    {
+      "src": "xematiazoicon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "xematiazoicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
