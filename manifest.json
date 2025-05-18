@@ -1,7 +1,7 @@
 {
   "name": "Ξεματιάσμα",
   "short_name": "Ξεμάτιασμα",
-  "description": "Ένα απλό app για να σε ξεματιάσει με την ευχή του ματιού.",
+  "description": "Μια απλή εφαρμογή που άμα διαβάσεις μια απο τις 3 ευχές, θα ξεματιαστείς",
   "start_url": "/XEMASTISAS/",
   "scope": "/XEMASTISAS/",
   "display": "standalone",
