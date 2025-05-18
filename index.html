@@ -112,7 +112,13 @@
             // Αρχικά, κρύβουμε το μάτι και το μήνυμα
             document.getElementById("eyeCircle").style.display = "none";
             document.getElementById("message").classList.add("hidden");
-            
+
+            // Καθυστέρηση 3-5 δευτερολέπτων πριν εμφανιστεί το μάτι και το μήνυμα
+            const delay = Math.floor(Math.random() * 200) + 300;
+            setTimeout(function() {
+                // Εμφανίζουμε το μάτι
+                document.getElementById("eyeCircle").style.display = "block";
+
                 // Επιλέγουμε ένα από τα 3 μηνύματα
                 const messages = [
                     "1η Ευχή: «Ιησούς Χριστός νικά κι όλα τα κακά σκορπά»",
